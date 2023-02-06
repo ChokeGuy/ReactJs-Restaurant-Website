@@ -1,0 +1,109 @@
+@mixin MainButton {
+  color: #fff;
+  padding: 8px 20px;
+  background-color: $main-color;
+  border: none;
+  font-size: 14px;
+  border-radius: 20px;
+  opacity: 1;
+  transition: all 0.2s ease-in;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+@mixin DropDownList {
+  position: absolute;
+  list-style: none;
+  background-color: #fff;
+  top: 39px;
+  padding: 10px 0px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
+  z-index: 999;
+}
+@mixin DropDownItem {
+  min-width: 200px;
+  display: flex;
+  float: left;
+  font-size: 16px;
+  color:#7F7F90;
+  font-style: bold;
+  padding: 10px 20px;
+}
+@mixin CenterFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin BeforeBridge {
+  &::before {
+    content: "";
+    width: 200px;
+    height: 14px;
+    position: absolute;
+    top: 22px;
+  }
+}
+@mixin SlideUpAndDown {
+  visibility: hidden;
+  transform: translateY(15px);
+  animation: SlideUpandDown 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+@mixin SlideRightAndLeft {
+  visibility: hidden;
+  transform: translateX(-30px);
+  animation: SlideRightandLeft 0.2s ease-out;
+  transition: all 0.2s ease-in-out;
+}
+@keyframes SlideUpandDown {
+  from {
+    transform: translateY(15px);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+@mixin SlideOut {
+  color: #000;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background-color: $main-color;
+    transition: all 0.3s ease-in;
+    animation: Slideout 0.3s ease-in;
+  }
+}
+
+// Animation
+@keyframes SlideRightandLeft {
+  from {
+    transform: translateX(10px);
+  }
+  to {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes Slideout {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes Pulse{
+  0%{
+    transform:scale(0.2);
+  }
+  100%{
+    transform:scale(1);
+  }
+}

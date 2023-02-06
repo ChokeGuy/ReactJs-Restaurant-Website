@@ -1,0 +1,125 @@
+@import "variable";
+@import "./mixins/mixins.scss";
+.mynavbar {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  height: 90px;
+  width: 100vw;
+  z-index: 1000;
+  box-shadow: 1px 1px #ccc;
+  .mynavbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .mynavbar-logo {
+      position: absolute;
+      left: 143px;
+      font-size: 28px;
+      color: #000;
+      text-decoration: none;
+      font-weight: 700;
+      span {
+        color: $main-color;
+      }
+    }
+    .mynavbar-list {
+      position: absolute;
+      left: 415px;
+      .mynavbar-list-container {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        .mynavbar-list__item {
+          position: relative;
+          font-size: 16px;
+          color: $text-color;
+          padding: 10px 0 12px 28px;
+          font-weight: 600;
+          &:hover {
+            cursor: pointer;
+            &:hover .mynavbar-list__link {
+              color: #000;
+              &:before {
+                display: block;
+                width: 100%;
+              }
+            }
+          }
+          .mynavbar-list__link {
+            position: relative;
+            text-decoration: none;
+            padding: 0 3px;
+            @include SlideOut();
+            color: $text-color;
+            animation: Slideout 0.3s ease-in;
+            transition: all 0.3s ease-in;
+            &.active {
+              @include SlideOut();
+              &:before {
+                display: block;
+                width: 100%;
+              }
+            }
+            .mynavbar-list__item__content {
+              position: relative;
+              @include SlideUpAndDown();
+              @include DropDownList();
+              .mynavbar-list__item__content-tag {
+                @include DropDownItem();
+                &:hover {
+                  cursor: pointer;
+                  color: $main-color;
+                }
+              }
+              :nth-of-type(2) {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .deepdropdown-list {
+                  @include DropDownList();
+                  @include SlideRightAndLeft();
+                  top: 0;
+                  left: 200px;
+                  .deepdropdown-list__item {
+                    @include DropDownItem();
+                    &:hover {
+                      color: $main-color;
+                    }
+                  }
+                }
+                &:hover .deepdropdown-list {
+                  color: $text-color;
+                  visibility: visible;
+                  transform: translateX(0px);
+                }
+              }
+            }
+          }
+        }
+        :nth-of-type(7) {
+          &:hover .mynavbar-list__link .mynavbar-list__item__content {
+            visibility: visible;
+            transform: translateY(-5px);
+            color: $text-color;
+          }
+          .mynavbar-list__link span {
+            margin-right: 1px;
+          }
+          .mynavbar-list__link:hover {
+            span {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+    .mynavbar-btn {
+      position: absolute;
+      right: 150px;
+      font-size: 14px;
+    }
+  }
+}
