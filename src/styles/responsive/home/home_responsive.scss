@@ -1,0 +1,28 @@
+@media (min-width: 500px) and (max-width: 991px) {
+  .container-home-content {
+    justify-content: center;
+    .home-content__title {
+      order: 1;
+      margin-top: 48px;
+      .home-content__title__intro,
+      .home-content__title__midtro {
+        text-align: center;
+      }
+      .home-content-title-trailer {
+        justify-content: center;
+      }
+    }
+
+    .home-content__image {
+      order: 0;
+    }
+  }
+}
+@media (max-width: 640px) {
+  .home-content__title__intro {
+    font-size: 36px !important;
+    span {
+      display: block;
+    }
+  }
+}

@@ -6,20 +6,24 @@ const Introduce = (props) => {
     <div className="introduce-container">
       <div className="container">
         <div className="row gy-4 introduce-container-content">
-          <div className="introduce-container-content__why col-lg-4">
-            <span>Why Choose Yummy?</span>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis
-              aute irure dolor in reprehenderit Asperiores dolores sed et.
-              Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio
-              ad corporis.
-            </p>
-            <button className="mybtn introduce-content-btn">Learn More</button>
+          <div className="col-lg-4 col-md-12 col-12">
+            <div className="introduce-container-content__why">
+              <span>Why Choose Yummy?</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis
+                aute irure dolor in reprehenderit Asperiores dolores sed et.
+                Tenetur quia eos. Autem tempore quibusdam vel necessitatibus
+                optio ad corporis.
+              </p>
+              <button className="mybtn introduce-content-btn">
+                Learn More
+              </button>
+            </div>
           </div>
           <div className="introduce-container-content-whylist col-lg-8">
             <div className="row gy-4 content-whylist-bigbox">
-              <div className="content-whylist-box col-lg-4 col-xl-4">
+              <div className="content-whylist-box col-lg-12 col-xl-4">
                 <div className="content-whylist__item ">
                   <div className="whylist__item-icon-contain">
                     <img
@@ -35,7 +39,7 @@ const Introduce = (props) => {
                   </p>
                 </div>
               </div>
-              <div className="content-whylist-box  col-lg-4 col-xl-4">
+              <div className="content-whylist-box col-lg-12 col-xl-4">
                 <div className="content-whylist__item ">
                   <div className="whylist__item-icon-contain">
                     <img
@@ -51,7 +55,7 @@ const Introduce = (props) => {
                   </p>
                 </div>
               </div>
-              <div className="content-whylist-box  col-lg-4 col-xl-4">
+              <div className="content-whylist-box col-lg-12 col-xl-4">
                 <div className="content-whylist__item ">
                   <div className="whylist__item-icon-contain">
                     <img

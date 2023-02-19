@@ -3,10 +3,9 @@
 .mynavbar {
   position: fixed;
   display: flex;
-  justify-content: center;
   background-color: #fff;
   height: 90px;
-  width: 100vw;
+  width: 100%;
   z-index: 1000;
   box-shadow: 1px 1px #ccc;
   .mynavbar-content {
@@ -14,8 +13,6 @@
     justify-content: space-between;
     align-items: center;
     .mynavbar-logo {
-      position: absolute;
-      left: 143px;
       font-size: 28px;
       color: #000;
       text-decoration: none;
@@ -24,9 +21,11 @@
         color: $main-color;
       }
     }
+    .header-moblie__menu-icon {
+      font-size: 24px;
+      display: none;
+    }
     .mynavbar-list {
-      position: absolute;
-      left: 415px;
       .mynavbar-list-container {
         list-style: none;
         display: flex;
@@ -34,9 +33,10 @@
         .mynavbar-list__item {
           position: relative;
           font-size: 16px;
-          color: $text-color;
-          padding: 10px 0 12px 28px;
+          color: $text--secondary-color;
+          padding: 10px 0 10px 28px;
           font-weight: 600;
+          left: -10px;
           &:hover {
             cursor: pointer;
             &:hover .mynavbar-list__link {
@@ -52,9 +52,7 @@
             text-decoration: none;
             padding: 0 3px;
             @include SlideOut();
-            color: $text-color;
-            animation: Slideout 0.3s ease-in;
-            transition: all 0.3s ease-in;
+            color: $text--secondary-color;
             &.active {
               @include SlideOut();
               &:before {
@@ -91,7 +89,7 @@
                   }
                 }
                 &:hover .deepdropdown-list {
-                  color: $text-color;
+                  color: $text--secondary-color;
                   visibility: visible;
                   transform: translateX(0px);
                 }
@@ -103,10 +101,16 @@
           &:hover .mynavbar-list__link .mynavbar-list__item__content {
             visibility: visible;
             transform: translateY(-5px);
-            color: $text-color;
+            color: $text--secondary-color;
+          }
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
           .mynavbar-list__link span {
-            margin-right: 1px;
+            margin-left: 10px;
+            padding-bottom: 3px;
           }
           .mynavbar-list__link:hover {
             span {
@@ -116,9 +120,153 @@
         }
       }
     }
-    .mynavbar-btn {
+    .mynavbar-list-mobile-before {
+      position: fixed;
+      background-color: rgba(255, 255, 255, 0.9);
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+    .mynavbar-list-mobile {
+      background-color: rgba(255, 255, 255, 0.9);
+      width: 400px;
+      height: 100vh;
       position: absolute;
-      right: 150px;
+      top: 0;
+      right: 0;
+      border-left: 1px solid rgb(224, 224, 224);
+      z-index: 99;
+      .header-close {
+        position: absolute;
+        right: 30px;
+        top: 5px;
+        padding: 10px;
+        font-size: 28px;
+        color: $text--primary-color;
+        z-index: 10000;
+      }
+      .mynavbar-list-container {
+        position: relative;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0 10px 0;
+        .mynavbar-list__item {
+          position: relative;
+          font-size: 16px;
+          width: 100%;
+          text-align: left;
+          color: $text--secondary-color;
+          padding: 11px 18px;
+          font-weight: 600;
+          z-index: 10000;
+          &:hover {
+            cursor: pointer;
+            &:hover .mynavbar-list__link {
+              color: #000;
+            }
+          }
+          &:nth-of-type(1) {
+            border-bottom: 2px solid $main-color;
+          }
+          .mynavbar-list__link {
+            &.active {
+              color: #000;
+            }
+            position: relative;
+            text-decoration: none;
+            padding: 0 3px;
+            color: $text--secondary-color;
+            .mynavbar-list__item__content {
+              position: relative;
+              border: 1px solid $main-color;
+              background-color: #ccc;
+              @include SlideUpAndDown();
+              visibility: visible;
+              .mynavbar-list__item__content-tag {
+                @include DropDownItem();
+              }
+              :nth-of-type(2) {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .deepdropdown-list {
+                  @include DropDownList();
+                  top: 0;
+                  left: 200px;
+                  .deepdropdown-list__item {
+                    @include DropDownItem();
+                    &:hover {
+                      color: $main-color;
+                    }
+                  }
+                }
+                &:hover .deepdropdown-list {
+                  color: $text--secondary-color;
+                  visibility: visible;
+                  transform: translateX(0px);
+                }
+              }
+            }
+          }
+        }
+        :nth-of-type(7) {
+          padding: 0;
+          a {
+            padding: 11px 20px !important;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+            transition: 0.3s;
+          }
+          .mynavbar-list__item__content {
+            padding: 10px 0;
+            margin: 10px 20px;
+            list-style: none;
+            border: 1px solid #eee;
+            .mynavbar-list__item__content-tag {
+              background-color: #fff;
+              padding: 10px 20px;
+              transition: 0.3s;
+              &:hover {
+                color: #000;
+              }
+            }
+            & .mynavbar-list__item__content-tag:nth-of-type(2) {
+              padding: 0;
+              .deepdropdown {
+                padding: 11px 20px !important;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+                transition: 0.3s;
+              }
+              .deepdropdown-list {
+                padding: 10px 0;
+                margin: 10px 20px;
+                list-style: none;
+                border: 1px solid #eee;
+                color: $text--secondary-color;
+                .deepdropdown-list__item {
+                  background-color: #fff;
+                  padding: 10px 20px;
+                  transition: 0.3s;
+                  &:hover {
+                    color: #000;
+                  }
+                }
+              }
+              &:hover {
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+    .mynavbar-btn {
       font-size: 14px;
     }
   }
