@@ -3,7 +3,7 @@ import gem from "../../assests/images/gem.svg";
 import inboxes from "../../assests/images/inboxes-fill.svg";
 const Introduce = (props) => {
   return (
-    <div className="introduce-container">
+    <section className="introduce-container" id="introduce">
       <div className="container">
         <div className="row gy-4 introduce-container-content">
           <div className="col-lg-4 col-md-12 col-12">
@@ -75,7 +75,7 @@ const Introduce = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Introduce;

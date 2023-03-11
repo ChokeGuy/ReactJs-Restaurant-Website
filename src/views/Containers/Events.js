@@ -1,7 +1,7 @@
 import Carousel from "nuka-carousel";
 const Events = (props) => {
   return (
-    <div className="event-container">
+    <section className="event-container" id="events">
       <div className="row g-0">
         <div className="col-lg-12">
           <div className="event-header">
@@ -72,7 +72,7 @@ const Events = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

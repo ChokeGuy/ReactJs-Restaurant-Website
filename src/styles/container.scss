@@ -32,6 +32,7 @@
       width: 100%;
       justify-content: flex-start;
       .title-trailer-btn {
+        text-decoration: none;
         font-size: 14px;
         font-weight: 500;
         margin-right: 24px;
@@ -41,6 +42,7 @@
         border-radius: 50px;
         transition: 0.5s;
         &:hover {
+          color: #fff;
           box-shadow: 0 8px 28px rgb(206 18 18 / 45%);
         }
       }
@@ -73,6 +75,7 @@
   }
   .home-content__image {
     @include CenterFlex();
+    padding: 0;
   }
 }
 
@@ -111,7 +114,6 @@
       background: url("../assests/images/about-images/about.jpg") no-repeat top
         left;
       border-radius: 2px;
-      // background-size: 100% 700px;
       color: $main-color;
       .content-image-phone {
         display: flex;
@@ -403,6 +405,7 @@
         transition: 0.2s;
         &:hover {
           color: $main-color;
+          cursor: pointer;
           border-color: rgba(182, 182, 191, 0.5);
         }
         &.active {
@@ -419,6 +422,7 @@
   .menu-content {
     .menu-content-header {
       @include HeaderContent();
+      margin-bottom: 0;
       font-family: "Inter", sans-serif;
       font-size: 36px;
       font-weight: 600;
@@ -430,6 +434,9 @@
         font-weight: 400;
         margin-bottom: 0;
       }
+      & span {
+        text-transform: capitalize;
+      }
     }
     .menu-content-list {
       .menu-content-box {
@@ -437,8 +444,7 @@
           padding: 0 60px;
           margin-top: 48px;
           & img {
-            height: 296px;
-            width: 296px;
+            // width: 296px;
             margin-bottom: 15px;
           }
           & div {
@@ -448,6 +454,9 @@
             padding-bottom: 7px;
           }
           & p {
+            width: 100%;
+            @include CenterFlex();
+            white-space: nowrap;
             font-size: 16px;
             color: $text--secondary-color;
             padding-bottom: 8px;
@@ -521,7 +530,6 @@
     }
   }
   ul {
-    // top: 51px !important;
     .paging-item {
       margin-top: 10px;
       &.active {
@@ -531,7 +539,7 @@
         }
       }
       .carousel-dot {
-        padding: 0 5px;
+        padding: 0 4px;
         padding-top: 10px;
         fill: $text--secondary-color !important;
         opacity: 0.3 !important;
@@ -787,7 +795,7 @@
   }
   .slide-current + .slide-visible + .slide-visible {
     border: 6px solid $main-color;
-    background: #fff;
+
     z-index: 1;
     transform: scale(1.2);
     width: fit-content;
@@ -830,10 +838,12 @@
         display: flex;
         background-color: #f4f4f4;
         padding: 30px;
+        align-items: center;
         .contact__item-pic {
           margin-right: 15px;
           width: 56px;
           height: 56px;
+          padding: 16px;
           background-color: $main-color;
           display: flex;
           align-items: center;
@@ -877,6 +887,9 @@
             box-shadow: none;
           }
         }
+        .form-group {
+          padding-bottom: 20px;
+        }
         .contact-textarea-box {
           padding-bottom: 20px;
         }
@@ -900,4 +913,48 @@
       }
     }
   }
+}
+// Flightbox
+.fslightbox-full-dimension {
+  .fslightbox-nav {
+    .fslightbox-slide-number-container {
+      display: none;
+    }
+  }
+  .fslightbox-toolbar {
+    right: 22px;
+    top: 16px;
+    height: 32px;
+    border-radius: 2px;
+    background-color: #0f0f0f;
+    .fslightbox-toolbar-button:nth-child(1) {
+      display: none;
+    }
+    .fslightbox-toolbar-button:nth-child(2) {
+      width: 32px;
+      svg {
+        width: 26px;
+        height: 26px;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+          brightness(102%) contrast(102%);
+        .fslightbox-svg-path {
+          fill: cyan;
+        }
+      }
+      &:hover svg {
+        .fslightbox-svg-path {
+          fill: black;
+        }
+      }
+    }
+  }
+
+  .fslightbox-fade-in-strong {
+    zoom: 0.8;
+  }
+}
+
+// yarl-Lightbox
+.yarl__container {
+  background-color: rgba(0, 0, 0, 0.8) !important;
 }

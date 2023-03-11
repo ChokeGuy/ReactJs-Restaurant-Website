@@ -1,5 +1,12 @@
 @import "../variable";
 @import "mixins.scss";
-.mybtn{
-    @include MainButton();
+.mybtn {
+  @include MainButton();
+}
+.scrollbtn {
+  @include ScrollBtn();
+}
+.scrollactive {
+  opacity: 1;
+  visibility: visible;
 }

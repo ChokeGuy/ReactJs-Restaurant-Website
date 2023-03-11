@@ -1,6 +1,6 @@
 const Book = (props) => {
   return (
-    <div className="book-container">
+    <section className="book-container" id="book">
       <div className="container">
         <div className="row gy-4">
           <div className="col-lg-12 col-sm-12 col-md-12">
@@ -76,7 +76,7 @@ const Book = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Book;

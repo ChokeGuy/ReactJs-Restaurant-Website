@@ -13,7 +13,7 @@ library.add(faTwitter, faFacebook, faInstagram, faLinkedin);
 
 const Chefs = (props) => {
   return (
-    <div className="chefs-container">
+    <section className="chefs-container" id="chefs">
       <div className="container">
         <div className="row gy-4">
           <div className="chefs-header col-lg-12 col-md-12 col-sm-12">
@@ -24,7 +24,7 @@ const Chefs = (props) => {
           </div>
           <div className="chefs-content">
             <div className="row gy-4">
-              <div className="col-lg-4 ">
+              <div className="col-lg-4 col-md-6 col-sm-12">
                 <div className="chefs-content-box">
                   <div className="chefs-content-img">
                     <div className="chefs-content-social">
@@ -54,7 +54,7 @@ const Chefs = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4">
+              <div className="col-lg-4 col-md-6 col-sm-12">
                 <div className="chefs-content-box">
                   <div className="chefs-content-img">
                     <div className="chefs-content-social">
@@ -84,7 +84,7 @@ const Chefs = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4">
+              <div className="col-lg-4 col-md-6 col-sm-12">
                 <div className="chefs-content-box">
                   <div className="chefs-content-img">
                     <div className="chefs-content-social">
@@ -118,7 +118,7 @@ const Chefs = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

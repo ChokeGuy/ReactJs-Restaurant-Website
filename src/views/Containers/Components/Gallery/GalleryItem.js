@@ -1,6 +1,6 @@
 const GalleryItem = (props) => {
   return (
-    <a href={props.href} className="gallery-item">
+    <a className="gallery-item" onClick={props.onClick}>
       <img className="img-fluid" src={props.src} alt=""></img>
     </a>
   );

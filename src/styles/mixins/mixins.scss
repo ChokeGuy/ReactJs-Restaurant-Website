@@ -12,6 +12,42 @@
     opacity: 0.8;
   }
 }
+@mixin ScrollBtn {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  bottom: 15px;
+  right: 15px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  visibility: hidden;
+  opacity: 0;
+  background-color: $main-color;
+  cursor: pointer;
+  padding: 22px !important;
+  border-radius: 50%;
+  transition: all 0.4s;
+  font-weight: bold;
+  &:hover {
+    cursor: pointer;
+    visibility: visible;
+    opacity: 0.8;
+  }
+  img {
+    color: #fff;
+    font-weight: bolder;
+    height: 12px;
+    position: absolute;
+    filter: invert(100%) sepia(8%) saturate(31%) hue-rotate(197deg)
+      brightness(106%) contrast(107%);
+    path {
+      stroke: #000000;
+      stroke-width: 25px;
+    }
+  }
+}
 @mixin DropDownList {
   position: absolute;
   list-style: none;
@@ -63,7 +99,22 @@
     transform: translateY(-5px);
   }
 }
-
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @mixin SlideOut {
   color: #000;
   &:before {
@@ -120,5 +171,22 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+.example-initial-animation {
+  animation: initial-animation 2s ease;
+}
+
+@keyframes initial-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
   }
 }

@@ -1,6 +1,6 @@
 const Stat = (props) => {
   return (
-    <div className="stat-container">
+    <section className="stat-container" id="stat">
       <div className="stat-container-background">
         <div className="container stat-container-content">
           <div className="row stat-container-content-list">
@@ -31,7 +31,7 @@ const Stat = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Stat;

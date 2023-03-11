@@ -1,6 +1,5 @@
 import "../styles/header.scss";
-import "../styles/responsive/header/header_responsive.scss";
-import "../styles/responsive/header/header_transition.scss";
+import "../styles/transition/header_transition.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { CSSTransition } from "react-transition-group";
@@ -9,7 +8,8 @@ import {
   faBars,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
+import "../styles/responsive/responsive.scss";
 library.add(faChevronDown, faBars, faXmark);
 
 const Header = (props) => {
@@ -61,48 +61,100 @@ const Header = (props) => {
         "transform:rotate(0deg)";
     }
   };
+  const handleClickLink = (e) => {
+    if (e.target.tagName !== "LI") {
+      document
+        .querySelector(".mynavbar-list__link.active")
+        .classList.remove("active");
+      let thishref = e.target.href.replace("http://localhost:3000/", "");
+      const link = document.querySelector(
+        `.mynavbar-list__link[href='${thishref}']`
+      );
+      if (headermenu === false) {
+        link.classList.add("active");
+      } else {
+        handleHideHeaderMenu();
+        link.classList.add("active");
+      }
+    }
+  };
   return (
     <div className="header">
       <div className="mynavbar">
         <div className="container d-flex align-items-center justify-content-between mynavbar-content">
-          <a href="/" className=" mynavbar-logo">
+          <a href="#home" className=" mynavbar-logo">
             Yummy
             <span>.</span>
           </a>
-          <div className=" mynavbar-list">
+          <div className="mynavbar-list">
             <ul className="mynavbar-list-container">
-              <li className="mynavbar-list__item">
-                <a href="/" className="mynavbar-list__link active">
+              <li
+                className="mynavbar-list__item"
+                onClick={(e) => {
+                  handleClickLink(e);
+                }}
+              >
+                <a href="#home" className="mynavbar-list__link active">
                   Home
                 </a>
               </li>
-              <li className="mynavbar-list__item">
-                <a href="/about" className="mynavbar-list__link">
+              <li
+                className="mynavbar-list__item"
+                onClick={(e) => {
+                  handleClickLink(e);
+                }}
+              >
+                <a href="#about" className="mynavbar-list__link">
                   About
                 </a>
               </li>
-              <li className="mynavbar-list__item">
-                <a href="/menu" className="mynavbar-list__link">
+              <li
+                className="mynavbar-list__item"
+                onClick={(e) => {
+                  handleClickLink(e);
+                }}
+              >
+                <a href="#menu" className="mynavbar-list__link">
                   Menu
                 </a>
               </li>
-              <li className="mynavbar-list__item">
-                <a href="/events" className="mynavbar-list__link">
+              <li
+                className="mynavbar-list__item"
+                onClick={(e) => {
+                  handleClickLink(e);
+                }}
+              >
+                <a href="#events" className="mynavbar-list__link">
                   Events
                 </a>
               </li>
-              <li className="mynavbar-list__item">
-                <a href="/chefs" className="mynavbar-list__link">
+              <li
+                className="mynavbar-list__item"
+                onClick={(e) => {
+                  handleClickLink(e);
+                }}
+              >
+                <a href="#chefs" className="mynavbar-list__link">
                   Chefs
                 </a>
               </li>
-              <li className="mynavbar-list__item">
-                <a href="/gallery" className="mynavbar-list__link">
+              <li
+                className="mynavbar-list__item"
+                onClick={(e) => {
+                  handleClickLink(e);
+                }}
+              >
+                <a href="#gallery" className="mynavbar-list__link">
                   Gallery
                 </a>
               </li>
-              <li className="mynavbar-list__item">
-                <a href="/" className="mynavbar-list__link">
+              <li
+                className="mynavbar-list__item"
+                onClick={(e) => {
+                  handleClickLink(e);
+                }}
+              >
+                <a href="#home" className="mynavbar-list__link">
                   Drop Down
                   <ul className="mynavbar-list__item__content">
                     <li className="mynavbar-list__item__content-tag">
@@ -144,8 +196,13 @@ const Header = (props) => {
                   </span>
                 </a>
               </li>
-              <li className="mynavbar-list__item">
-                <a href="/" className="mynavbar-list__link">
+              <li
+                className="mynavbar-list__item"
+                onClick={(e) => {
+                  handleClickLink(e);
+                }}
+              >
+                <a href="#contact" className="mynavbar-list__link">
                   Contact
                 </a>
               </li>
@@ -175,39 +232,74 @@ const Header = (props) => {
               <div ref={nodeRef} className="mynavbar-list-mobile">
                 <div>
                   <ul className="mynavbar-list-container">
-                    <li className="mynavbar-list__item">
-                      <a href="/" className="mynavbar-list__link active">
+                    <li
+                      className="mynavbar-list__item"
+                      onClick={(e) => {
+                        handleClickLink(e);
+                      }}
+                    >
+                      <a href="#home" className="mynavbar-list__link active">
                         Home
                       </a>
                     </li>
-                    <li className="mynavbar-list__item">
-                      <a href="/about" className="mynavbar-list__link">
+                    <li
+                      className="mynavbar-list__item"
+                      onClick={(e) => {
+                        handleClickLink(e);
+                      }}
+                    >
+                      <a href="#about" className="mynavbar-list__link">
                         About
                       </a>
                     </li>
-                    <li className="mynavbar-list__item">
-                      <a href="/menu" className="mynavbar-list__link">
+                    <li
+                      className="mynavbar-list__item"
+                      onClick={(e) => {
+                        handleClickLink(e);
+                      }}
+                    >
+                      <a href="#menu" className="mynavbar-list__link">
                         Menu
                       </a>
                     </li>
-                    <li className="mynavbar-list__item">
-                      <a href="/events" className="mynavbar-list__link">
+                    <li
+                      className="mynavbar-list__item"
+                      onClick={(e) => {
+                        handleClickLink(e);
+                      }}
+                    >
+                      <a href="#events" className="mynavbar-list__link">
                         Events
                       </a>
                     </li>
-                    <li className="mynavbar-list__item">
-                      <a href="/chefs" className="mynavbar-list__link">
+                    <li
+                      className="mynavbar-list__item"
+                      onClick={(e) => {
+                        handleClickLink(e);
+                      }}
+                    >
+                      <a href="#chefs" className="mynavbar-list__link">
                         Chefs
                       </a>
                     </li>
-                    <li className="mynavbar-list__item">
-                      <a href="/gallery" className="mynavbar-list__link">
+                    <li
+                      className="mynavbar-list__item"
+                      onClick={(e) => {
+                        handleClickLink(e);
+                      }}
+                    >
+                      <a href="#gallery" className="mynavbar-list__link">
                         Gallery
                       </a>
                     </li>
-                    <li className="mynavbar-list__item">
+                    <li
+                      className="mynavbar-list__item"
+                      onClick={(e) => {
+                        handleClickLink(e);
+                      }}
+                    >
                       <a
-                        href="#"
+                        href="#home"
                         className="mynavbar-list__link dropdown-link"
                         onClick={handleShowDropDown}
                       >
@@ -286,8 +378,13 @@ const Header = (props) => {
                         </ul>
                       </CSSTransition>
                     </li>
-                    <li className="mynavbar-list__item">
-                      <a href="/" className="mynavbar-list__link">
+                    <li
+                      className="mynavbar-list__item"
+                      onClick={(e) => {
+                        handleClickLink(e);
+                      }}
+                    >
+                      <a href="#contact" className="mynavbar-list__link">
                         Contact
                       </a>
                     </li>

@@ -1,8 +1,29 @@
 import about2 from "../../assests/images/about-images/about-2.jpg";
 import check2 from "../../assests/images/check2-all.svg";
+import { useEffect, useState } from "react";
+import arrow from "../../assests/images/arrow-up.svg";
+import FsLightbox from "fslightbox-react";
 const About = (props) => {
+  const [toggler, setToggler] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= 100) {
+        if (document.querySelector(".scrollbtn") !== null) {
+          document.querySelector(".scrollbtn").classList.add("scrollactive");
+        }
+      } else {
+        document.querySelector(".scrollbtn").classList.remove("scrollactive");
+      }
+    });
+  }, []);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
-    <div className="container-about-content">
+    <section className="container-about-content" id="about">
       <div className="container container-about">
         <div className="row gy-4">
           <div className="container-about-header col-md-12 col-lg-12 col-sm-12">
@@ -71,15 +92,29 @@ const About = (props) => {
                   src={about2}
                   className="intro__video-picture img-fluid"
                 ></img>
-                <a className="intro__video-clip" href="/">
-                  <iframe title="video"></iframe>
-                </a>
+                <div
+                  className="intro__video-clip"
+                  onClick={() => setToggler(!toggler)}
+                ></div>
+                <FsLightbox
+                  toggler={toggler}
+                  sources={["https://www.youtube.com/watch?v=8EJ3zbKTWQ8"]}
+                  zoomIncrement={0}
+                ></FsLightbox>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <button
+        onClick={() => {
+          scrollToTop();
+        }}
+        className="scrollbtn"
+      >
+        <img alt="" src={arrow}></img>
+      </button>
+    </section>
   );
 };
 

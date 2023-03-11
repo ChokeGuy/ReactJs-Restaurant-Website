@@ -7,7 +7,8 @@
   height: 90px;
   width: 100%;
   z-index: 1000;
-  box-shadow: 1px 1px #ccc;
+  border-bottom: 1px solid #fff;
+  transition: height 0.3s;
   .mynavbar-content {
     display: flex;
     justify-content: space-between;
@@ -50,7 +51,7 @@
           .mynavbar-list__link {
             position: relative;
             text-decoration: none;
-            padding: 0 3px;
+            padding: 0px 3px;
             @include SlideOut();
             color: $text--secondary-color;
             &.active {
@@ -129,6 +130,7 @@
       height: 100vh;
     }
     .mynavbar-list-mobile {
+      overflow-x: scroll;
       background-color: rgba(255, 255, 255, 0.9);
       width: 400px;
       height: 100vh;

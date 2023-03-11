@@ -23,7 +23,7 @@ const Footer = (props) => {
     <div className="footer">
       <div className="container">
         <div className="row gy-3 footer-underline">
-          <div className="col-lg-3 col-md-3 col-sm-6">
+          <div className="col-lg-3 col-md-6 col-sm-12 p-0 footer-content">
             <div className="footer-box">
               <div className="footer-icon">
                 <FontAwesomeIcon icon="fa-solid fa-location-dot" />
@@ -38,7 +38,7 @@ const Footer = (props) => {
               </div>
             </div>
           </div>
-          <div className="col-lg-3 col-md-3 col-sm-6">
+          <div className="col-lg-3 col-md-6 col-sm-12 p-0 footer-content">
             <div className="footer-box">
               <div className="footer-icon">
                 <FontAwesomeIcon icon="fa-solid fa-phone" />
@@ -55,7 +55,7 @@ const Footer = (props) => {
               </div>
             </div>
           </div>
-          <div className="col-lg-3 col-md-3 col-sm-6">
+          <div className="col-lg-3 col-md-6 col-sm-12 p-0 footer-content">
             <div className="footer-box">
               <div className="footer-icon">
                 <FontAwesomeIcon icon="fa-regular fa-clock" />
@@ -71,7 +71,7 @@ const Footer = (props) => {
               </div>
             </div>
           </div>
-          <div className="col-lg-3 col-md-3 col-sm-6">
+          <div className="col-lg-3 col-md-6 col-sm-12 p-0 footer-content">
             <div className="footer-box">
               <div className="footer-icon"></div>
               <div className="footer-info">

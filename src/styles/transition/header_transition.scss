@@ -1,14 +1,9 @@
-@import "../../variable.scss";
 .mynavbar-list-mobile-enter {
   transform: translateX(400px);
 }
 .mynavbar-list-mobile-enter-active {
-  transform: translateX(0px);
-
-  transition: transform 200ms;
-}
-.mynavbar-list-mobile-enter-done {
-  overflow-y: scroll;
+  transform: translateX(0);
+  transition: transform 300ms;
 }
 .mynavbar-list-mobile-exit-active {
   transform: translateX(400px);

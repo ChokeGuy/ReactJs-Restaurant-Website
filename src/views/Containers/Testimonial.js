@@ -7,7 +7,7 @@ import Carousel from "nuka-carousel";
 import star from "../../assests/images/star-fill.svg";
 const Testimoninal = (props) => {
   return (
-    <div className="testimonial-container">
+    <section className="testimonial-container" id="testimonial">
       <div className="container">
         <div className="row">
           <div className="testimonial-header col-lg-12">
@@ -59,7 +59,7 @@ const Testimoninal = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-2">
+              <div className="col-lg-2 col-md-12 col-sm-12 text-center testimonial-box">
                 <img
                   alt=""
                   src={testimonials_1}
@@ -97,7 +97,7 @@ const Testimoninal = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-2">
+              <div className="col-lg-2 col-md-12 col-sm-12 text-center testimonial-box">
                 <img
                   alt=""
                   src={testimonials_2}
@@ -134,7 +134,7 @@ const Testimoninal = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-2">
+              <div className="col-lg-2 col-md-12 col-sm-12 text-center testimonial-box">
                 <img
                   alt=""
                   src={testimonials_3}
@@ -171,7 +171,7 @@ const Testimoninal = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-2">
+              <div className="col-lg-2 col-md-12 col-sm-12 text-center testimonial-box">
                 <img
                   alt=""
                   src={testimonials_4}
@@ -182,7 +182,7 @@ const Testimoninal = (props) => {
           </Carousel>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Testimoninal;

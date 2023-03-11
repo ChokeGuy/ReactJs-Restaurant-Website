@@ -11,10 +11,8 @@ import Introduce from "./Introduce";
 import Stat from "./Stat";
 import Testimonial from "./Testimonial";
 import Book from "./Book";
-import "../../styles/responsive/home/home_responsive.scss";
-import "../../styles/responsive/about/about_responsive.scss";
-import "../../styles/responsive/introduce/introduce_responsive.scss";
-import "../../styles/responsive/stat/stat_responsive.scss";
+
+// import "../../styles/responsive/responsive.scss";
 const Container = (props) => {
   return (
     <div>

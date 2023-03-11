@@ -4,7 +4,7 @@ import phone from "../../assests/images/contact-images/telephone.svg";
 import share from "../../assests/images/contact-images/share.svg";
 const Contact = (props) => {
   return (
-    <div className="contact-container">
+    <section className="contact-container" id="contact">
       <div className="container">
         <div className="row gy-4">
           <div className="col-lg-12">
@@ -81,7 +81,7 @@ const Contact = (props) => {
               </div>
               <div className="contact-form">
                 <form>
-                  <div className="row g-4">
+                  <div className="row gx-4">
                     <div className="col-xl-6 form-group">
                       <input
                         className="contact-form__input form-control"
@@ -111,7 +111,7 @@ const Contact = (props) => {
                       ></textarea>
                     </div>
                   </div>
-                  <button className="mybtn contact-btn my-3">
+                  <button className="mybtn contact-btn mt-3">
                     Send Message
                   </button>
                 </form>
@@ -120,7 +120,7 @@ const Contact = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
