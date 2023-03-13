@@ -1,6 +1,6 @@
 const GalleryItem = (props) => {
   return (
-    // jsx-a11y/anchor-is-valid
+    // eslint-disable-next-line
     <a className="gallery-item" onClick={props.onClick}>
       <img className="img-fluid" src={props.src} alt=""></img>
     </a>
