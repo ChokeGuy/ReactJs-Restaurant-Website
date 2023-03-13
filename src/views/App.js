@@ -4,7 +4,7 @@ import Container from "./Containers/Container";
 import Footer from "./Footer";
 import Header from "./Header";
 import "../styles/loading.scss";
-import RingLoader from "react-spinners/RingLoader";
+import SyncLoader from "react-spinners/SyncLoader";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1900);
+    }, 700);
     let section = document.querySelectorAll("section");
     let dotNav = document.querySelectorAll(".mynavbar-list__item a");
     window.onscroll = () => {
@@ -110,7 +110,7 @@ function App() {
         </>
       ) : (
         <div className="App-loading">
-          <RingLoader loading={loading} size={60} cssOverride={override} />
+          <SyncLoader loading={loading} size={15} cssOverride={override} />
         </div>
       )}
     </div>

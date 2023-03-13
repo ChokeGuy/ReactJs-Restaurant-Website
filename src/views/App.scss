@@ -1,3 +1,4 @@
+@import "../styles/variable.scss";
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +16,7 @@
   background-color: white;
   & span {
     & span {
-      border: thick solid #ce1212 !important;
+      background-color: #ce1212 !important;
     }
   }
 }
