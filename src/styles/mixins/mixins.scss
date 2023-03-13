@@ -105,6 +105,10 @@
   animation-name: fadeInUp200;
   -webkit-animation-name: fadeInUp200;
 }
+.fadeInAngle {
+  animation-name: fadeInAngle;
+  -webkit-animation-name: fadeInAngle;
+}
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -134,6 +138,30 @@
     visibility: visible;
   }
 }
+@keyframes fadeInAngle {
+  from {
+    opacity: 0;
+    transform: translate(-60px, -5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@-webkit-keyframes fadeInAngle {
+  from {
+    opacity: 0;
+    transform: translate(-60px, -5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
 @keyframes fadeInUp200 {
   from {
     opacity: 0;

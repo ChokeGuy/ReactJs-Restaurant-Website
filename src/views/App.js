@@ -58,7 +58,6 @@ function App() {
 
     handleScrollAnimation("testimonial-header");
     handleScrollAnimation("chefs-header");
-    handleScrollAnimation("slider-container");
     handleScrollAnimation("event-header");
     handleScrollAnimation("chefs-content-container");
 
@@ -68,27 +67,38 @@ function App() {
     handleScrollAnimation("contact-content");
     handleScrollAnimation("form-book");
     handleScrollAnimation("book-content-img");
+
+    handleScrollAnimation("slider-container");
+    handleScrollAnimation("event-content");
+    handleScrollAnimation("gallery-content");
+    handleScrollAnimation("stat-container-content__item");
   }, [loading]);
   const handleScrollAnimation = (className) => {
-    window.addEventListener("scroll", function () {
-      let top = window.pageYOffset + window.innerHeight,
-        isMany = document.querySelectorAll(`.${className}`),
-        isVisible = top > document.querySelector(`.${className}`).offsetTop;
-      if (isVisible) {
-        if (isMany.length > 1)
-          document
-            .querySelectorAll(`.${className}`)
-            .forEach((item) => item.classList.add("animated", "fadeInUp200"));
-        else if (className === "book-content-img") {
-          document
-            .querySelectorAll(`.${className}`)
-            .forEach((item) => item.classList.add("animated", "zoomIn"));
-        } else
-          document
-            .querySelector(`.${className}`)
-            .classList.add("animated", "fadeInUp200");
-      }
-    });
+    setTimeout(() => {
+      window.addEventListener("scroll", function () {
+        let top = window.pageYOffset + window.innerHeight,
+          isMany = document.querySelectorAll(`.${className}`),
+          isVisible = top > document.querySelector(`.${className}`).offsetTop;
+        if (isVisible) {
+          if (isMany.length > 1 && className !== "stat-container-content__item")
+            document
+              .querySelectorAll(`.${className}`)
+              .forEach((item) => item.classList.add("animated", "fadeInUp200"));
+          else if (className === "book-content-img") {
+            document
+              .querySelectorAll(`.${className}`)
+              .forEach((item) => item.classList.add("animated", "zoomIn"));
+          } else if (className === "stat-container-content__item") {
+            document
+              .querySelectorAll(`.${className}`)
+              .forEach((item) => item.classList.add("animated", "fadeInAngle"));
+          } else
+            document
+              .querySelector(`.${className}`)
+              .classList.add("animated", "fadeInUp200");
+        }
+      });
+    }, 800);
   };
   return (
     <div className="App">
