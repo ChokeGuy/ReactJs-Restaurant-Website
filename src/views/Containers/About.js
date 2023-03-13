@@ -22,6 +22,7 @@ const About = (props) => {
       behavior: "smooth",
     });
   };
+
   return (
     <section className="container-about-content" id="about">
       <div className="container container-about">
@@ -35,10 +36,7 @@ const About = (props) => {
           </div>
         </div>
         <div className="row gy-4 container-about-content-image">
-          <div
-            alt=""
-            className="content-image-picture col-lg-7 col-md-12 col-sm-12"
-          >
+          <div className="content-image-picture col-lg-7 col-md-12 col-sm-12">
             <div className="content-image-phone">
               <span>Book a Table</span>
               <p>+1 5589 55488 55</p>

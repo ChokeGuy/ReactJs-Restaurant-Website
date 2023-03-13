@@ -10,18 +10,18 @@ library.add(faCirclePlay);
 const Home = (props) => {
   const [toggler, setToggler] = useState(false);
   return (
-    <section className="container" id="home">
+    <section className="home-container container" id="home">
       <div className="container-home-content row">
         <div className="home-content__title col-12 col-lg-5 col-md-8 col-sm-12">
-          <div className="home-content__title__intro">
+          <div className="home-content__title__intro animated fadeInUp">
             ENJOY YOUR HEALTHY
             <span> DELECIOUS FOOD</span>
           </div>
-          <div className="home-content__title__midtro">
+          <div className="home-content__title__midtro animated fadeInUp">
             The Yummy restaurant deliver many foods from over 50 countrys in the
             world.Check our websites for details.Enjoy your visitation.
           </div>
-          <div className="home-content-title-trailer">
+          <div className="home-content-title-trailer animated fadeInUp">
             <a href="#book" className="mybtn title-trailer-btn">
               Book a Table
             </a>
@@ -32,15 +32,14 @@ const Home = (props) => {
               <FontAwesomeIcon icon="fa-regular fa-circle-play" />
               <span>Watch Video</span>
             </div>
-            <FsLightbox
-              toggler={toggler}
-              sources={["https://www.youtube.com/watch?v=ZLZ0hZ8fn8s"]}
-              slideshow={{ delay: 500 }}
-              zoomIncrement={0}
-            ></FsLightbox>
           </div>
+          <FsLightbox
+            toggler={toggler}
+            sources={["https://www.youtube.com/watch?v=ZLZ0hZ8fn8s"]}
+            slideshow={{ delay: 500 }}
+          ></FsLightbox>
         </div>
-        <div className="home-content__image col-12 col-5 col-lg-5 col-md-12 col-sm-12">
+        <div className="home-content__image col-12 col-5 col-lg-5 col-md-12 col-sm-12 animated zoomIn">
           <img className="img-fluid" alt="" src={food_decor}></img>
         </div>
       </div>

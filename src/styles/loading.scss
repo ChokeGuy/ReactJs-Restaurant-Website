@@ -1,0 +1,85 @@
+@import "./mixins/mixins.scss";
+@import "./mixins/class.scss";
+
+#home {
+  .home-content__title__intro {
+    @include LoadingAnimation(0.5s);
+  }
+  .home-content-title-trailer,
+  .home-content__title__midtro {
+    @include LoadingAnimation(0.7s);
+  }
+}
+#about {
+  .content-image-picture {
+    @include LoadingAnimation(1s);
+  }
+  .content-intro-box {
+    @include LoadingAnimation(1.2s);
+  }
+}
+
+#introduce {
+  .content-whylist-bigbox {
+    & .content-whylist-box:nth-of-type(1) {
+      @include LoadingAnimation(0.9s);
+    }
+    & .content-whylist-box:nth-of-type(2) {
+      @include LoadingAnimation(1s);
+    }
+    & .content-whylist-box:nth-of-type(3) {
+      @include LoadingAnimation(1.1s);
+    }
+  }
+}
+#stat {
+}
+#menu {
+  .menu-food-list {
+    @include LoadingAnimation(0.9s);
+  }
+  .menu-content-header {
+    @include LoadingAnimation(1s);
+  }
+  .menu-content-list {
+    @include LoadingAnimation(1.1s);
+  }
+}
+#testimonial {
+  .slider-container {
+    @include LoadingAnimation(1.3s);
+  }
+}
+#events {
+  .slider-container {
+    @include LoadingAnimation(1.3s);
+  }
+}
+#chefs {
+  .chefs-content {
+    & .chefs-content-container:nth-of-type(1) {
+      @include LoadingAnimation(1s);
+    }
+    & .chefs-content-container:nth-of-type(2) {
+      @include LoadingAnimation(1.1s);
+    }
+    & .chefs-content-container:nth-of-type(3) {
+      @include LoadingAnimation(1.2s);
+    }
+  }
+}
+#book {
+  .form-book {
+    @include LoadingAnimation(1s);
+  }
+}
+#gallery {
+  .slider-container {
+    @include LoadingAnimation(1.3s);
+  }
+}
+#contact {
+  .contact-content {
+    @include LoadingAnimation(1.1s);
+  }
+}

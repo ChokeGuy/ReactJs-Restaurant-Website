@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 //Home Section
 .container-home-content {
-  min-height: 60vh;
+  min-height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,7 +14,7 @@
     flex-direction: column;
     .home-content__title__intro {
       font-size: 65px;
-      opacity: 0.9;
+      // opacity: 1;
       text-align: left;
       margin-bottom: 16px;
       font-family: "Amatic SC", cursive;
@@ -76,6 +76,9 @@
   .home-content__image {
     @include CenterFlex();
     padding: 0;
+    img {
+      max-width: 96%;
+    }
   }
 }
 

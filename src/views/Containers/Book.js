@@ -16,7 +16,7 @@ const Book = (props) => {
               <div className="row g-0">
                 <div className="book-content-img  col-lg-4"></div>
                 <div className="book-content-form col-lg-8">
-                  <form action="/">
+                  <form action="/" className="form-book">
                     <div className="row gy-4 book-content-form-list">
                       <div className="book-content-form-box col-lg-4 col-md-6">
                         <input

@@ -24,7 +24,7 @@ const Chefs = (props) => {
           </div>
           <div className="chefs-content">
             <div className="row gy-4">
-              <div className="col-lg-4 col-md-6 col-sm-12">
+              <div className="col-lg-4 col-md-6 col-sm-12 chefs-content-container">
                 <div className="chefs-content-box">
                   <div className="chefs-content-img">
                     <div className="chefs-content-social">
@@ -54,7 +54,7 @@ const Chefs = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 col-sm-12">
+              <div className="col-lg-4 col-md-6 col-sm-12 chefs-content-container">
                 <div className="chefs-content-box">
                   <div className="chefs-content-img">
                     <div className="chefs-content-social">
@@ -84,7 +84,7 @@ const Chefs = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 col-sm-12">
+              <div className="col-lg-4 col-md-6 col-sm-12 chefs-content-container">
                 <div className="chefs-content-box">
                   <div className="chefs-content-img">
                     <div className="chefs-content-social">

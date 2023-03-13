@@ -79,7 +79,7 @@ const Header = (props) => {
     }
   };
   return (
-    <div className="header">
+    <div className="header-container">
       <div className="mynavbar">
         <div className="container d-flex align-items-center justify-content-between mynavbar-content">
           <a href="#home" className=" mynavbar-logo">

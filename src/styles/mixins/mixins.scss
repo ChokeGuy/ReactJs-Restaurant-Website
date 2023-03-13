@@ -91,6 +91,78 @@
   transform: translateX(-30px);
   transition: all 0.2s ease-in-out;
 }
+@mixin LoadingAnimation($duration) {
+  animation-duration: $duration;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-duration: $duration;
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
+.fadeInUp200 {
+  animation-name: fadeInUp200;
+  -webkit-animation-name: fadeInUp200;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+  }
+}
+@keyframes fadeInUp200 {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes fadeInUp200 {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+  }
+}
 @keyframes SlideUpandDown {
   from {
     transform: translateY(15px);
@@ -147,6 +219,18 @@
 }
 
 // Animation
+.animated {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.8s;
+  -webkit-animation-fill-mode: both;
+}
+
+.zoomIn {
+  animation-name: ZoomIn;
+  -webkit-animation-name: ZoomIn;
+}
+
 @keyframes SlideRightandLeft {
   from {
     transform: translateX(10px);
@@ -155,7 +239,6 @@
     transform: translateX(-10px);
   }
 }
-
 @keyframes Slideout {
   from {
     width: 0;
@@ -173,20 +256,13 @@
     transform: scale(1);
   }
 }
-.example-initial-animation {
-  animation: initial-animation 2s ease;
-}
-
-@keyframes initial-animation {
+@keyframes ZoomIn {
   0% {
-    transform: rotate(0deg);
+    transform: scale(1.2);
+    opacity: 0;
   }
-
-  50% {
-    transform: rotate(360deg);
-  }
-
   100% {
-    transform: rotate(0deg);
+    transform: scale(1);
+    opacity: 1;
   }
 }
