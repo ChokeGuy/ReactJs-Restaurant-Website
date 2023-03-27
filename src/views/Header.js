@@ -67,7 +67,10 @@ const Header = (props) => {
       if (myactive !== null) {
         myactive.classList.remove("active");
       }
-      let thishref = e.target.href.replace("http://localhost:3000/", "");
+      let thishref = e.target.href.replace(
+        "https://yummyrestaurant.vercel.app/",
+        ""
+      );
       const link = document.querySelector(
         `.mynavbar-list__link[href='${thishref}']`
       );
