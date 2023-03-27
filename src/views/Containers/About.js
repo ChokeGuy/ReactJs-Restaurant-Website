@@ -96,12 +96,12 @@ const About = (props) => {
                 ></div>
               </div>
             </div>
+            <FsLightbox
+              toggler={toggler}
+              sources={["https://www.youtube.com/watch?v=8EJ3zbKTWQ8"]}
+              zoomIncrement={0}
+            ></FsLightbox>
           </div>
-          <FsLightbox
-            toggler={toggler}
-            sources={["https://www.youtube.com/watch?v=8EJ3zbKTWQ8"]}
-            zoomIncrement={0}
-          ></FsLightbox>
         </div>
       </div>
       <button
