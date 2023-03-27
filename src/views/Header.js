@@ -63,9 +63,10 @@ const Header = (props) => {
   };
   const handleClickLink = (e) => {
     if (e.target.tagName !== "LI") {
-      document
-        .querySelector(".mynavbar-list__link.active")
-        .classList.remove("active");
+      const myactive = document.querySelector(".mynavbar-list__link.active");
+      if (myactive !== null) {
+        myactive.classList.remove("active");
+      }
       let thishref = e.target.href.replace("http://localhost:3000/", "");
       const link = document.querySelector(
         `.mynavbar-list__link[href='${thishref}']`

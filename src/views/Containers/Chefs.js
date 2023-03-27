@@ -28,16 +28,16 @@ const Chefs = (props) => {
                 <div className="chefs-content-box">
                   <div className="chefs-content-img">
                     <div className="chefs-content-social">
-                      <a href="/">
+                      <a href="#chefs">
                         <FontAwesomeIcon icon="fa-brands fa-twitter" />
                       </a>
-                      <a href="/">
+                      <a href="#chefs">
                         <FontAwesomeIcon icon="fa-brands fa-facebook" />
                       </a>
-                      <a href="/">
+                      <a href="#chefs">
                         <FontAwesomeIcon icon="fa-brands fa-instagram" />
                       </a>
-                      <a href="/">
+                      <a href="#chefs">
                         <FontAwesomeIcon icon="fa-brands fa-linkedin" />
                       </a>
                     </div>
@@ -58,16 +58,16 @@ const Chefs = (props) => {
                 <div className="chefs-content-box">
                   <div className="chefs-content-img">
                     <div className="chefs-content-social">
-                      <a href="/">
+                      <a href="#chefs">
                         <FontAwesomeIcon icon="fa-brands fa-twitter" />
                       </a>
-                      <a href="/">
+                      <a href="#chefs">
                         <FontAwesomeIcon icon="fa-brands fa-facebook" />
                       </a>
-                      <a href="/">
+                      <a href="#chefs">
                         <FontAwesomeIcon icon="fa-brands fa-instagram" />
                       </a>
-                      <a href="/">
+                      <a href="#chefs">
                         <FontAwesomeIcon icon="fa-brands fa-linkedin" />
                       </a>
                     </div>
@@ -88,16 +88,16 @@ const Chefs = (props) => {
                 <div className="chefs-content-box">
                   <div className="chefs-content-img">
                     <div className="chefs-content-social">
-                      <a href="/">
+                      <a href="#chefs">
                         <FontAwesomeIcon icon="fa-brands fa-twitter" />
                       </a>
-                      <a href="/">
+                      <a href="#chefs">
                         <FontAwesomeIcon icon="fa-brands fa-facebook" />
                       </a>
-                      <a href="/">
+                      <a href="#chefs">
                         <FontAwesomeIcon icon="fa-brands fa-instagram" />
                       </a>
-                      <a href="/">
+                      <a href="#chefs">
                         <FontAwesomeIcon icon="fa-brands fa-linkedin" />
                       </a>
                     </div>

@@ -43,6 +43,41 @@ function App() {
         }
       });
     };
+
+    const handleScrollAnimation = (className) => {
+      setTimeout(() => {
+        window.addEventListener("scroll", function () {
+          let top = window.pageYOffset + window.innerHeight,
+            isMany = document.querySelectorAll(`.${className}`),
+            isVisible = top > document.querySelector(`.${className}`).offsetTop;
+          if (isVisible) {
+            if (
+              isMany.length > 1 &&
+              className !== "stat-container-content__item"
+            )
+              document
+                .querySelectorAll(`.${className}`)
+                .forEach((item) =>
+                  item.classList.add("animated", "fadeInUp200")
+                );
+            else if (className === "book-content-img") {
+              document
+                .querySelectorAll(`.${className}`)
+                .forEach((item) => item.classList.add("animated", "zoomIn"));
+            } else if (className === "stat-container-content__item") {
+              document
+                .querySelectorAll(`.${className}`)
+                .forEach((item) =>
+                  item.classList.add("animated", "fadeInAngle")
+                );
+            } else
+              document
+                .querySelector(`.${className}`)
+                .classList.add("animated", "fadeInUp200");
+          }
+        });
+      }, 800);
+    };
     handleScrollAnimation("container-about-header");
     handleScrollAnimation("content-image-picture");
     handleScrollAnimation("content-intro-box");
@@ -72,34 +107,10 @@ function App() {
     handleScrollAnimation("event-content");
     handleScrollAnimation("gallery-content");
     handleScrollAnimation("stat-container-content__item");
+    return () => {
+      window.removeEventListener("scroll", handleScrollAnimation);
+    };
   }, [loading]);
-  const handleScrollAnimation = (className) => {
-    setTimeout(() => {
-      window.addEventListener("scroll", function () {
-        let top = window.pageYOffset + window.innerHeight,
-          isMany = document.querySelectorAll(`.${className}`),
-          isVisible = top > document.querySelector(`.${className}`).offsetTop;
-        if (isVisible) {
-          if (isMany.length > 1 && className !== "stat-container-content__item")
-            document
-              .querySelectorAll(`.${className}`)
-              .forEach((item) => item.classList.add("animated", "fadeInUp200"));
-          else if (className === "book-content-img") {
-            document
-              .querySelectorAll(`.${className}`)
-              .forEach((item) => item.classList.add("animated", "zoomIn"));
-          } else if (className === "stat-container-content__item") {
-            document
-              .querySelectorAll(`.${className}`)
-              .forEach((item) => item.classList.add("animated", "fadeInAngle"));
-          } else
-            document
-              .querySelector(`.${className}`)
-              .classList.add("animated", "fadeInUp200");
-        }
-      });
-    }, 800);
-  };
   return (
     <div className="App">
       {loading === false ? (
