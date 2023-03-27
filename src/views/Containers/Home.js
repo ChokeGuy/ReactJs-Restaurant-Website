@@ -37,6 +37,8 @@ const Home = (props) => {
             toggler={toggler}
             sources={["https://www.youtube.com/watch?v=ZLZ0hZ8fn8s"]}
             slideshow={{ delay: 500 }}
+            type="youtube"
+            types={["youtube"]}
           ></FsLightbox>
         </div>
         <div className="home-content__image col-12 col-5 col-lg-5 col-md-12 col-sm-12 animated zoomIn">

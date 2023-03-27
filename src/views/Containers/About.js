@@ -100,6 +100,8 @@ const About = (props) => {
               toggler={toggler}
               sources={["https://www.youtube.com/watch?v=8EJ3zbKTWQ8"]}
               zoomIncrement={0}
+              type="youtube"
+              types={["youtube"]}
             ></FsLightbox>
           </div>
         </div>
