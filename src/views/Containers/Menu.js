@@ -34,6 +34,7 @@ const Menu = (props) => {
           <ul className="col-lg-12 menu-food-list">
             <li className="menu-food-list__item">
               <a
+                href="#menu"
                 onClick={(e, index) => {
                   handleClickTitle(e);
                   setIndex(index);
@@ -46,6 +47,7 @@ const Menu = (props) => {
             </li>
             <li className="menu-food-list__item">
               <a
+                href="#menu"
                 onClick={(e, index) => {
                   handleClickTitle(e);
                   setIndex(index);
@@ -59,6 +61,7 @@ const Menu = (props) => {
             </li>
             <li className="menu-food-list__item">
               <a
+                href="#menu"
                 onClick={(e, index) => {
                   handleClickTitle(e);
                   setIndex(index);
@@ -72,6 +75,7 @@ const Menu = (props) => {
             </li>
             <li className="menu-food-list__item">
               <a
+                href="#menu"
                 onClick={(e, index) => {
                   handleClickTitle(e);
                   setIndex(index);
